@@ -25,11 +25,13 @@ Vue.component('calendar', {
 						'day--out-scope': ! calendarItem.isActive,
 						'day--has-events': calendarItem.hasEvents && calendarItem.isActive,
 					}"
-					@mouseover="mouseOver(calendarItem.d, calendarItem.isActive)"
-					@mouseleave="dayHoverModalHide"
-					@click="dayClick(this.event, calendarItem.d, calendarItem.isActive)"
 				>
-					<span v-text="calendarItem.val"></span>
+					<span 
+						v-text="calendarItem.val"
+						@mouseover="mouseOver(calendarItem.d, calendarItem.isActive)"
+						@mouseleave="dayHoverModalHide"
+						@click="dayClick(this.event, calendarItem.d, calendarItem.isActive)"
+					></span>
 				</li>
 				<div :class="modalNsp" 
 					v-show="isVisible" 
