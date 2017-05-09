@@ -1,0 +1,57 @@
+.calendar {
+	width: 420px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-content: flex-start;
+	position: relative;
+	
+	li {
+		width: 60px;
+		text-align: center;
+		&.day {
+			padding: 4px 0;
+			&--in-scope {
+				background: #eee;
+			}
+			&--out-scope {
+				background: #c2c2c2;
+				span {
+					border: none;
+				}
+			}
+			&--is-today {
+				span {
+					border: 1px #0093ff solid;
+					background: #0093ff;
+					color: #fff;
+				}
+			}
+			&--has-events {
+				span {
+					border: 1px #0093ff solid;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+			span {
+				display: inline-block;
+				border-radius: 50%;
+				width: 26px;
+			}
+		}
+	}
+
+	&__modal {
+		position: absolute;
+		right: 100%;
+		border: 1px #666 solid;
+		top: 0;
+		width: 200px;
+	}
+}

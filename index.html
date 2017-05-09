@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Vue Calendar</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.1/css/bulma.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/app.css">
+</head>
+<body>
+
+	<div id="app">
+		<calendar 
+			:events="{
+				'01/5/2017': [
+					{
+						title: 'Test day 1',
+						city: 'City'
+					},
+					{
+						title: 'Test 2',
+						city: 'City 2'
+					}
+				],
+				'08/5/2017': [
+					{
+						title: 'Test',
+						city: 'City'
+					},
+					{
+						title: 'Test 2',
+						city: 'City 2'
+					}
+				],
+				'09/5/2017': [
+					{
+						title: 'Test 3',
+						city: 'City 2'
+					}
+				],
+				'14/5/2017': [
+					{
+						title: 'Test 14',
+						city: 'City 2'
+					}
+				]
+			}"
+			:monthsNames="{
+				standalone: 'январь_февраль_март_апрель_май_июнь_июль_август_сентябрь_октябрь_ноябрь_декабрь',
+				format: 'января_февраля_марта_апреля_мая_июня_июля_августа_сентября_октября_ноября_декабря'
+			}"
+		></calendar>
+	</div>
+
+	<script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.3/moment.min.js"></script>
+	<script src="./js/moment-range.js"></script>
+	<script src="//unpkg.com/vue"></script>
+	<script src="./js/app.js"></script>
+</body>
+</html>
